@@ -1,0 +1,30 @@
+{
+  "name": "otm_bs5",
+  "version": "1.0.0",
+  "description": "bootstrap 5 design version of otm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aydoganab/otm_bs5.git"
+  },
+  "author": "abdullah aydogan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aydoganab/otm_bs5/issues"
+  },
+  "homepage": "https://github.com/aydoganab/otm_bs5#readme",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta1",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^1.4.1"
+  }
+}
