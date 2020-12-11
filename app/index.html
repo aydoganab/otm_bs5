@@ -5,41 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/otm_bs5.css" rel="stylesheet">
     <script src="js/otm_bs5.js"></script>
-    <title>Hello, world!</title>
+    <title>İTÜ KİMYA OTOMASYON</title>
     <style>
         .login-bg{
             background-image: linear-gradient(to bottom, #09203f 0%, #2f5fa0 100%);
         }
     </style>
 </head>
-<body class="text-white">
+<body class="bg-white">
 
 <div class="position-absolute w-100 pt-2 text-center" style="z-index: 1">
-    <h1 class="display-3"><i class="fa fa-life-ring text-danger"></i>tm</h1>
-    <h1 class="display-4 d-none d-md-block">İTÜ KİMYA OTOMASYON</h1>
-    <p class="display-5 d-md-none">İTÜ KİMYA OTOMASYON</p>
+    <h1 class="display-4"><i class="fa fa-life-ring text-danger"></i>tm</h1>
+    <h1 class="display-5 d-none d-md-block">İTÜ KİMYA OTOMASYON</h1>
+    <p class="display-6 d-md-none">İTÜ KİMYA OTOMASYON</p>
 </div>
 
-<div class="d-table position-absolute w-100 h-100 login-bg">
+<div class="d-table position-absolute w-100 h-100">
     <div class="d-table-cell align-middle">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-5 col-md-7 col-sm-9">
-                    <form id="loginForm" method="post" novalidate>
+                    <form id="loginForm" method="get" action="home.html" novalidate>
                         <div class="mb-2">
-                            <input type="email" name="eposta" id="eposta" class="form-control form-control-lg" placeholder="Eposta adresiniz" required>
+                            <input type="email" id="eposta" class="form-control form-control-lg" placeholder="Eposta adresiniz" required>
                         </div>
                         <div class="mb-2">
-                            <input type="password" name="sfr" id="sfr" class="form-control form-control-lg" placeholder="Şifreniz" required>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input type="checkbox" class="form-check-input" value="1" name="rm" id="rm">
-                            <label for="rm" class="form-check-label">Beni hatırla</label>
+                            <input type="password" id="sfr" class="form-control form-control-lg" placeholder="Şifreniz" required>
                         </div>
                         <div class="mb-2">
                             <button type="submit" class="btn btn-primary w-100 btn-lg py-2">Oturum Aç</button>
                         </div>
-                        <p><a href="sifre_hatirlat.php" class="link-light"><i class="fa fa-question-circle"></i> Şifremi Bilmiyorum/Unuttum</a></p>
+                        <p><a href="sifre_hatirlat.php"><i class="fa fa-question-circle"></i> Şifremi Bilmiyorum/Unuttum</a></p>
                         <input type="hidden" class="rp" name="rp" value="">
                     </form>
                 </div>
@@ -47,5 +43,20 @@
         </div>
     </div>
 </div>
+
+<div class="fixed-bottom">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link">İTÜ</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Fen-Edebiyat Fakültesi</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Kimya Bölümü</a>
+        </li>
+    </ul>
+</div>
+
 </body>
 </html>

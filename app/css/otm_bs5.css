@@ -29,11 +29,9 @@
 *::after {
   box-sizing: border-box; }
 
-:root {
-  font-size: 14px; }
-  @media (prefers-reduced-motion: no-preference) {
-    :root {
-      scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
 
 body {
   margin: 0;
@@ -42,7 +40,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #e9ecef;
+  background-color: #dee2e6;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -164,10 +162,10 @@ sup {
   top: -.5em; }
 
 a {
-  color: #267dfd;
+  color: #0d6efd;
   text-decoration: none; }
   a:hover {
-    color: #024dbc; }
+    color: #0a58ca; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -1303,6 +1301,24 @@ progress {
   .g-xxl-5,
   .gy-xxl-5 {
     --bs-gutter-y: 3rem; } }
+
+.breadcrumb, .nav-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none; }
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem; }
+  .breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: #6c757d;
+    content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */; }
+
+.breadcrumb-item.active {
+  color: #6c757d; }
 
 .table {
   --bs-table-bg: transparent;
@@ -3690,7 +3706,7 @@ textarea.form-control-lg {
 .d-none {
   display: none; }
 
-.shadow {
+.shadow, .nav-otm .nav-item .dropdown-menu {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .shadow-sm {
@@ -3964,7 +3980,7 @@ textarea.form-control-lg {
 .align-items-end {
   align-items: flex-end; }
 
-.align-items-center {
+.align-items-center, .nav-otm {
   align-items: center; }
 
 .align-items-baseline {
@@ -4339,7 +4355,7 @@ textarea.form-control-lg {
   padding-right: 0.5rem;
   padding-left: 0.5rem; }
 
-.px-3 {
+.px-3, .nav-breadcrumb {
   padding-right: 1rem;
   padding-left: 1rem; }
 
@@ -4351,7 +4367,7 @@ textarea.form-control-lg {
   padding-right: 3rem;
   padding-left: 3rem; }
 
-.py-0 {
+.py-0, .nav-otm .nav-item .dropdown-menu {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -4359,11 +4375,11 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem; }
 
-.py-2 {
+.py-2, .nav-otm .nav-item .dropdown-menu li a, .nav-breadcrumb {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
-.py-3 {
+.py-3, .nav-otm .nav-item .nav-link {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
@@ -4645,7 +4661,7 @@ textarea.form-control-lg {
 .rounded {
   border-radius: 0.25rem; }
 
-.rounded-0 {
+.rounded-0, .nav-otm .nav-item .dropdown-menu {
   border-radius: 0; }
 
 .rounded-1 {
@@ -4671,7 +4687,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
-.rounded-bottom {
+.rounded-bottom, .nav-otm .nav-item .dropdown-menu {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
@@ -6840,6 +6856,27 @@ textarea.form-control-lg {
     display: inline-flex; }
   .d-print-none {
     display: none; } }
+
+.nav-otm .nav-item .nav-link {
+  font-weight: 500;
+  color: #343a40; }
+  .nav-otm .nav-item .nav-link.nav-link-user {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+    .nav-otm .nav-item .nav-link.nav-link-user img {
+      max-height: 2.5rem; }
+  .nav-otm .nav-item .nav-link:hover {
+    background-color: #e9ecef; }
+  .nav-otm .nav-item .nav-link.show {
+    background-color: #e9ecef; }
+
+.nav-otm .nav-item .dropdown-menu li a {
+  font-weight: 500; }
+  .nav-otm .nav-item .dropdown-menu li a:hover {
+    background-color: #e9ecef; }
+
+.nav-breadcrumb {
+  background-color: #dee2e6; }
 
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
