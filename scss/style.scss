@@ -19,9 +19,11 @@ $display-font-sizes: (
         6: 2.5rem
 );
 
-//$link-color: lighten($blue, 5%);
-//$link-hover-color: darken($link-color, 20%);
+$link-color: $blue-500;
+$link-hover-color: $blue-700;
 $link-decoration: none;
+
+$caret-width: .25rem;
 
 //FORMS
 $btn-focus-width: 2px;
@@ -46,17 +48,19 @@ $input-btn-focus-width: .1rem;
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/card";
 @import "node_modules/bootstrap/scss/list-group";
+@import "node_modules/bootstrap/scss/alert";
 @import "node_modules/bootstrap/scss/helpers";
 @import "node_modules/bootstrap/scss/utilities/api";
 
 //NAV otm
 $user-img-max-height: 2.5rem;
+$nav-otm-color: $gray-800;
 .nav-otm{
   @extend .align-items-center;
   .nav-item{
     .nav-link{
       font-weight: 500;
-      color: $gray-800;
+      color: $nav-otm-color;
       @extend .py-3;
 
       &.nav-link-user{
@@ -74,6 +78,11 @@ $user-img-max-height: 2.5rem;
       &.show{
         background-color: $gray-200;
       }
+
+      &.active, &:active{
+        background-color: $gray-300;
+      }
+
     }
 
     .dropdown-menu{
@@ -83,9 +92,13 @@ $user-img-max-height: 2.5rem;
       @extend .rounded-bottom;
       li a{
         font-weight: 500;
+        color: $nav-otm-color;
         @extend .py-2;
         &:hover{
           background-color: $gray-200;
+        }
+        &:active{
+          background-color: $gray-300;
         }
       }
     }
@@ -93,13 +106,20 @@ $user-img-max-height: 2.5rem;
 }
 
 //breadcrumb
-.nav-breadcrumb {
-  @extend .breadcrumb;
+.breadcrumb-otm {
   @extend .py-2;
   @extend .px-3;
   background-color: $gray-300;
 }
 
+//dropdowns
+a.dropdown-toggle.show{
+  color: $link-hover-color;
+}
+
+.dropdown-toggle-no-caret:after{
+  display: none;
+}
 
 //Font Awesome
 $fa-font-path: "fonts";

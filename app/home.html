@@ -9,16 +9,17 @@
 </head>
 <body>
 
-<div class="container-lg">
+<div class="container-xl px-0">
     <div class="row justify-content-center g-0">
-        <div class="col-xxl-11 bg-white shadow">
+        <div class="col-xxl-11 bg-white shadow pb-5">
 
             <div class="d-flex align-items-center">
 
-                <h3 class="me-auto mb-0 ms-2 text-dark"><i class="fa fa-life-ring"></i>tm</h3>
+                <h2 class="me-auto mb-0 ms-2 text-dark"><i class="fa fa-life-ring"></i>tm</h2>
 
+                <!--MENÜ-->
                 <ul class="nav nav-otm d-none d-md-flex">
-                    <li class="nav-item"><a href="#" class="nav-link">ARAŞTIRMA</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">ARAŞTIRMA</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">DERSLER</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">KIM 101/101E</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">KIM 101EL</a></li>
@@ -30,30 +31,66 @@
                             <li><a href="#" class="dropdown-item">YÖNETİCİ</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link nav-link-user d-flex justify-content-center align-items-center">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-link-user d-flex justify-content-center align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="img/user_thumbnail.jpg" class="rounded-circle" alt="Ad Soyad">
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header text-center border-bottom">Abdullah Aydoğan</h6></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-key fa-fw"></i> Şifremi değiştir</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-image fa-fw"></i> Resmimi güncelle</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link"><i class="fa fa-sign-out-alt fa-lg"></i></a>
                     </li>
                 </ul>
 
-                <a href="#" class="d-md-none py-3 pe-2"><i class="fa fa-th fa-lg"></i></a>
+                <a href="#otm-mobil-menu" class="link-dark d-md-none py-3 pe-2" data-bs-toggle="collapse" role="button" aria-expanded="false"><i class="fa fa-th fa-lg"></i></a>
 
             </div>
+            
+            <!--MOBİL MENÜ-->
+            <div class="collapse p-2 mb-2" id="otm-mobil-menu">
+                <div class="row row-cols-2 g-2">
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100 text-truncate active">ARAŞTIRMA</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">DERSLER</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">KIM 101/101E</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">KIM 101EL</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">LABSİS</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">NMR</a></div>
+                    <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">YÖNETİCİ</a></div>
+                </div>
+            </div>
 
-            <nav class="nav-breadcrumb d-flex align-items-center">
+            <nav class="breadcrumb-otm d-flex align-items-center">
                 <ol class="breadcrumb me-auto mb-0">
-                    <li class="breadcrumb-item"><a href="./">ANA SAYFA</a></li>
+                    <li class="breadcrumb-item"><a href="./"><span class="d-sm-none"><i class="fa fa-home fa-lg"></i></span><span class="d-none d-sm-inline">ANA SAYFA</span></a></li>
                     <li class="breadcrumb-item"><a href="./">ARAŞTIRMA</a></li>
-                    <li class="breadcrumb-item"><a href="./">ELN</a></li>
-                    <li class="breadcrumb-item active">ElN Projects</li>
+                    <li class="breadcrumb-item dropdown d-none d-md-inline">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">ELN</a>
+                        <ul class="dropdown-menu shadow py-0">
+                           <li><a href="#" class="dropdown-item">Sayfa 1</a></li>
+                           <li><a href="#" class="dropdown-item">Sayfa 2</a></li>
+                           <li><a href="#" class="dropdown-item">Sayfa 3</a></li>
+                           <li><a href="#" class="dropdown-item">Sayfa 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-item d-none d-md-inline active">ELN Projects</li>
                 </ol>
 
-                <a href="#" class="link-danger"><i class="far fa-lg fa-frown-open"></i></a>
-                <a href="#" class="ms-3"><i class="fa fa-info-circle fa-lg"></i></a>
+                <div class="dropdown">
+                    <a href="#" class="link-danger"><i class="far fa-lg fa-frown-open"></i></a>
+                    <a href="#" class="ms-2 dropdown-toggle dropdown-toggle-no-caret" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-info-circle fa-lg"></i></a>
+                    <div class="dropdown-menu shadow border-0 p-0">
+                        <div class="alert alert-primary mb-0 text-center">
+                            <h6 class="alert-heading mb-0">Sayfa bilgileri</h6>
+                            <hr>
+                            <p><i class="fa fa-map-marker-alt"></i> genel &mdash; 7</p>
+                            <a href="#" class="alert-link">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
 
         </div>
