@@ -2895,7 +2895,7 @@ textarea.form-control-lg {
   z-index: 1000;
   display: none;
   min-width: 10rem;
-  padding: 0.5rem 0;
+  padding: 0 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
@@ -3058,6 +3058,12 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
+  .dropdown-item:first-child {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px); }
+  .dropdown-item:last-child {
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
   .dropdown-item:hover, .dropdown-item:focus {
     color: #1e2125;
     background-color: #f8f9fa; }
@@ -4445,7 +4451,7 @@ textarea.form-control-lg {
   padding-right: 3rem;
   padding-left: 3rem; }
 
-.py-0, .nav-otm .nav-item .dropdown-menu {
+.py-0 {
   padding-top: 0;
   padding-bottom: 0; }
 
