@@ -9,6 +9,21 @@
 </head>
 <body>
 
+<!--logout confirm-->
+<div id="logout-confirm" class="d-none">
+    <div class="modal-header">
+        <h5 class="modal-title">Oturumu Kapat</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <p class="text-center lead my-2">Oturum kapatılsın mı?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+        <a href="../logout.php" class="btn btn-danger">Oturumu kapat</a>
+    </div>
+</div>
+
 <div class="container-xl px-0">
     <div class="row justify-content-center g-0">
         <div class="col-xxl-11 bg-white shadow pb-5">
@@ -51,7 +66,7 @@
             </div>
             
             <!--MOBİL MENÜ-->
-            <div class="collapse p-2 mb-2" id="otm-mobil-menu">
+            <div class="collapse p-2 mb-2 d-md-none" id="otm-mobil-menu">
                 <div class="row row-cols-2 g-2">
                     <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100 text-truncate active">ARAŞTIRMA</a></div>
                     <div class="col"><a href="#" class="btn btn-outline-dark rounded-pill w-100">DERSLER</a></div>
@@ -79,7 +94,7 @@
                     <li class="breadcrumb-item d-none d-md-inline active">ELN Projects</li>
                 </ol>
 
-                <div class="dropdown">
+                <div class="dropdown d-none d-md-inline">
                     <a href="#" class="link-danger"><i class="far fa-lg fa-frown-open"></i></a>
                     <a href="#" class="ms-2 dropdown-toggle dropdown-toggle-no-caret" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-info-circle fa-lg"></i></a>
                     <div class="dropdown-menu shadow border-0">
@@ -91,6 +106,9 @@
                         </div>
                     </div>
                 </div>
+
+                <a href="#" class="d-md-none link-dark"><i class="fa fa-sign-out-alt fa-lg"></i></a>
+
             </nav>
 
         </div>
