@@ -26,7 +26,7 @@
     "gulp-csso": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
-    "gulp-terser": "^1.4.1",
+    "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1"
   }
 }

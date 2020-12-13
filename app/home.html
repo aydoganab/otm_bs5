@@ -9,6 +9,13 @@
 </head>
 <body>
 
+<!--modal-->
+<div class="modal" tabindex="-1" id="otm-modal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" id="modal-dialog">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+</div>
+
 <!--logout confirm-->
 <div id="logout-confirm" class="d-none">
     <div class="modal-header">
@@ -57,7 +64,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="fa fa-sign-out-alt fa-lg"></i></a>
+                        <a href="#" class="nav-link logout"><i class="fa fa-sign-out-alt fa-lg"></i></a>
                     </li>
                 </ul>
 
@@ -107,13 +114,21 @@
                     </div>
                 </div>
 
-                <a href="#" class="d-md-none link-dark"><i class="fa fa-sign-out-alt fa-lg"></i></a>
+                <a href="#" class="d-md-none link-dark logout"><i class="fa fa-sign-out-alt fa-lg"></i></a>
 
             </nav>
 
         </div>
     </div>
 </div>
+
+<script>
+    $('.logout').click(function (e) {
+        e.preventDefault();
+        $('.modal-content').html($('#logout-confirm').html());
+        $('#otm-modal').modal('show');
+    });
+</script>
 
 </body>
 </html>

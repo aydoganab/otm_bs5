@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     csso = require('gulp-csso'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
-    terser = require('gulp-terser'),
+    uglify=require('gulp-uglify'),
     browserSync = require('browser-sync').create();
 
 //SASS
@@ -23,11 +23,8 @@ gulp.task('sass', function () {
 //JS
 gulp.task('js', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
-        .pipe(terser({
-            mangle: true,
-            compress:false
-        }))
-        .pipe(rename('otm_bs5.js'))
+        //.pipe(uglify())
+        .pipe(concat('otm_bs5.js'))
         .pipe(gulp.dest("app/js"))
         .pipe(browserSync.reload({
             stream: true
