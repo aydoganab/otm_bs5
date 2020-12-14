@@ -29,11 +29,9 @@
 *::after {
   box-sizing: border-box; }
 
-:root {
-  font-size: 16px; }
-  @media (prefers-reduced-motion: no-preference) {
-    :root {
-      scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
 
 body {
   margin: 0;
