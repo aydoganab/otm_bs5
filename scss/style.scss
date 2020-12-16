@@ -2,13 +2,50 @@ $enable-important-utilities: false;
 $enable-negative-margins: true;
 $enable-transitions: true;
 
+$gray-100: #f9fafd;
+$gray-200: #edf2f9;
+$gray-300: #d8e2ef;
+$gray-400: #b6c1d2;
+$gray-500: #9da9bb;
+$gray-600: #748194;
+$gray-700: #5e6e82;
+$gray-800: #4d5969;
+$gray-900: #344050;
+$gray-1000: #232e3c;
+$gray-1100: #0b1727;
+
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900,
+        "1000": $gray-1000,
+        "1100": $gray-1100
+);
+
+$blue:    #2c7be5;
+$indigo:  #727cf5;
+$purple:  #6b5eae;
+$pink:    #ff679b;
+$red:     #e63757;
+$orange:  #fd7e14;
+$yellow:  #f5803e;
+$green:   #00d27a;
+$teal:    #02a8b5;
+$cyan:    #27bcfd;
+
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/utilities";
 
 //$font-size-root: 15px;
-$body-bg: $gray-300;
+$body-bg: $gray-200;
 
 $display-font-sizes: (
         1: 5rem,
