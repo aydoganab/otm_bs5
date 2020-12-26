@@ -32,12 +32,11 @@ $caret-width: .25rem;
 $dropdown-padding-y: 0;
 $dropdown-link-hover-bg: $gray-200;
 
-//FORMS
-$btn-focus-width: 2px;
-$input-focus-width: .1rem;
-$input-focus-border-color: tint-color($component-active-bg, 20%);
-$input-focus-box-shadow: none;
-$input-btn-focus-width: .1rem;
+//FOCUS
+$otm-focus-width: .12rem;
+$btn-focus-width: $otm-focus-width*1.1;
+$btn-focus-box-shadow:    0 0 0 $otm-focus-width $input-btn-focus-color;
+$input-focus-box-shadow:    0 0 0 $otm-focus-width $input-btn-focus-color;
 
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
