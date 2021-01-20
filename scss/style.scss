@@ -5,6 +5,11 @@ $enable-transitions: true;
 
 $green: #128664;
 
+
+$container-max-widths: (
+        xxl: 1420px
+);
+
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
@@ -35,8 +40,8 @@ $dropdown-link-hover-bg: $gray-200;
 //FOCUS
 $otm-focus-width: .12rem;
 $btn-focus-width: $otm-focus-width*1.1;
-$btn-focus-box-shadow:    0 0 0 $otm-focus-width $input-btn-focus-color;
-$input-focus-box-shadow:    0 0 0 $otm-focus-width $input-btn-focus-color;
+$btn-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
+$input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
