@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/aydoganab/otm_bs5#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "bootstrap": "^5.0.0-beta1",
+    "bootstrap-icons": "^1.4.0",
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -28,5 +29,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "uninstall": "^0.0.0"
   }
 }
