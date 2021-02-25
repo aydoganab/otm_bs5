@@ -144,16 +144,31 @@
                 <input type="text" class="form-control">
             </form>
             
-            <div class="alert alert-dismissible d-inline-flex align-items-center alert-toast-success">
-                <i class="fa fa-check"></i>
+            <div class="alert alert-toast alert-dismissible d-inline-flex align-items-center alert-toast-success">
+                <i class="fa fa-check-circle"></i>
                 <span class="mx-2">Deneme mesajı</span>
-                <button type="button" class="btn-close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
-            <div class="alert alert-dismissible d-inline-flex align-items-center alert-toast-danger">
-                <i class="fa fa-check"></i>
+            <div class="alert alert-toast alert-dismissible d-inline-flex align-items-center alert-toast-danger">
+                <i class="fa fa-exclamation-circle"></i>
                 <span class="mx-2">Deneme mesajı</span>
-                <button type="button" class="btn-close btn-close-white"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"></button>
             </div>
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
 
         </div>
 

@@ -1,4 +1,4 @@
-$enable-important-utilities: false;
+$enable-important-utilities: true;
 $enable-negative-margins: true;
 $enable-transitions: true;
 $enable-reduced-motion: true;
@@ -52,6 +52,10 @@ $btn-close-focus-shadow: none;
 
 $modal-backdrop-opacity: 0.4;
 
+$nav-link-padding-y: 0.75rem;
+$nav-tabs-link-active-bg: $gray-500;
+$nav-tabs-link-active-color: shade-color($nav-tabs-link-active-bg, 90%);
+
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
@@ -59,6 +63,7 @@ $modal-backdrop-opacity: 0.4;
 @import "node_modules/bootstrap/scss/containers";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/breadcrumb";
+@import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
@@ -70,6 +75,7 @@ $modal-backdrop-opacity: 0.4;
 @import "node_modules/bootstrap/scss/card";
 @import "node_modules/bootstrap/scss/list-group";
 @import "node_modules/bootstrap/scss/alert";
+@import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/modal";
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/helpers";
@@ -77,7 +83,7 @@ $modal-backdrop-opacity: 0.4;
 
 //NAV otm
 $user-img-max-height: 2.5rem;
-$nav-otm-color: $gray-800;
+$nav-otm-color: $gray-900;
 .nav-otm {
 
   @extend .align-items-center;
@@ -89,8 +95,8 @@ $nav-otm-color: $gray-800;
       @extend .py-3;
 
       &.nav-link-user {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
 
         img {
           max-height: $user-img-max-height;
@@ -162,20 +168,22 @@ a.dropdown-toggle.show {
 }
 
 //tosts
-.alert-toast-success{
-  background-color: $teal;
-  color: shade-color($teal, 75%);
-  padding: 0.5rem 1rem;
+.alert-toast{
+  padding: 0.5rem 3rem 0.5rem 0.5rem !important;
   .btn-close{
-    padding: 0.825rem;
-  }
+  padding: 0.825rem;
+}
+}
+
+.alert-toast-success{
+
+  background-color: $teal;
+  color: shade-color($teal, 70%);
+
 }
 .alert-toast-danger{
   background-color: $danger;
   color: tint-color($danger, 90%);
-  .btn-close{
-    padding: 0.825rem;
-  }
 }
 
 //Font Awesome
