@@ -191,6 +191,20 @@ a.dropdown-toggle.show {
   display: none;
 }
 
+//reduced buttons
+@each $color, $value in $theme-colors{
+  .btn-reduced-#{$color}{
+    @extend .btn;
+    @extend .btn-#{$color};
+    background-color: $white;
+    color: $value;
+    &:hover, &:active, &:focus{
+      background-color: tint-color($value, 90%);
+      color: shade-color($value, 20%);
+    }
+  }
+}
+
 //Font Awesome
 $fa-font-path: "../fonts";
 $fa-font-size-base: 1rem;
