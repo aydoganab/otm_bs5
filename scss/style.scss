@@ -14,7 +14,6 @@ $container-max-widths: (
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/utilities";
 
-
 //$font-size-root: 16px;
 $body-bg: $gray-200;
 
@@ -41,6 +40,17 @@ $otm-focus-width: .12rem;
 $btn-focus-width: $otm-focus-width*1.1;
 $btn-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
+$form-select-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
+$form-check-input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
+
+//FORMS
+$form-label-font-weight: 500;
+$form-label-margin-bottom: 0.125rem;
+$form-label-font-size: $small-font-size;
+
+$btn-close-focus-shadow: none;
+
+$modal-backdrop-opacity: 0.4;
 
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
@@ -52,6 +62,7 @@ $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 @import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/button-group";
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
@@ -68,6 +79,7 @@ $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $user-img-max-height: 2.5rem;
 $nav-otm-color: $gray-800;
 .nav-otm {
+
   @extend .align-items-center;
 
   .nav-item {
@@ -104,7 +116,7 @@ $nav-otm-color: $gray-800;
       @extend .rounded-0;
       @extend .rounded-bottom;
 
-      li a {
+      .dropdown-item {
         font-weight: 500;
         color: $nav-otm-color;
         @extend .py-2;
@@ -149,8 +161,25 @@ a.dropdown-toggle.show {
   font-size: 1.2rem;
 }
 
+//tosts
+.alert-toast-success{
+  background-color: $teal;
+  color: shade-color($teal, 75%);
+  padding: 0.5rem 1rem;
+  .btn-close{
+    padding: 0.825rem;
+  }
+}
+.alert-toast-danger{
+  background-color: $danger;
+  color: tint-color($danger, 90%);
+  .btn-close{
+    padding: 0.825rem;
+  }
+}
+
 //Font Awesome
-$fa-font-path: "fonts";
+$fa-font-path: "../fonts";
 $fa-font-size-base: 1rem;
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular";

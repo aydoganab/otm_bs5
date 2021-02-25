@@ -1468,13 +1468,16 @@ progress {
     -webkit-overflow-scrolling: touch; } }
 
 .form-label {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.125rem;
+  font-size: 0.875em;
+  font-weight: 500; }
 
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
+  font-weight: 500;
   line-height: 1.5; }
 
 .col-form-label-lg {
@@ -1665,7 +1668,7 @@ textarea.form-control-lg {
   .form-select:focus {
     border-color: #86b7fe;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: 0 0 0 0.12rem rgba(13, 110, 253, 0.25); }
   .form-select[multiple], .form-select[size]:not([size="1"]) {
     padding-right: 0.75rem;
     background-image: none; }
@@ -1721,7 +1724,7 @@ textarea.form-control-lg {
   .form-check-input:focus {
     border-color: #86b7fe;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: 0 0 0 0.12rem rgba(13, 110, 253, 0.25); }
   .form-check-input:checked {
     background-color: #0d6efd;
     border-color: #0d6efd; }
@@ -2526,15 +2529,97 @@ textarea.form-control-lg {
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d; }
 
-.btn-lg {
+.btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm {
+.btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle; }
+  .btn-group > .btn,
+  .btn-group-vertical > .btn {
+    position: relative;
+    flex: 1 1 auto; }
+  .btn-group > .btn-check:checked + .btn,
+  .btn-group > .btn-check:focus + .btn,
+  .btn-group > .btn:hover,
+  .btn-group > .btn:focus,
+  .btn-group > .btn:active,
+  .btn-group > .btn.active,
+  .btn-group-vertical > .btn-check:checked + .btn,
+  .btn-group-vertical > .btn-check:focus + .btn,
+  .btn-group-vertical > .btn:hover,
+  .btn-group-vertical > .btn:focus,
+  .btn-group-vertical > .btn:active,
+  .btn-group-vertical > .btn.active {
+    z-index: 1; }
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .btn-toolbar .input-group {
+    width: auto; }
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: -1px; }
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.dropdown-toggle-split {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem; }
+  .dropdown-toggle-split::after,
+  .dropup .dropdown-toggle-split::after,
+  .dropend .dropdown-toggle-split::after {
+    margin-left: 0; }
+  .dropstart .dropdown-toggle-split::before {
+    margin-right: 0; }
+
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem; }
+
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+  .btn-group-vertical > .btn,
+  .btn-group-vertical > .btn-group {
+    width: 100%; }
+  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) {
+    margin-top: -1px; }
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .btn-group-vertical > .btn ~ .btn,
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
 
 .fade {
   transition: opacity 0.15s linear; }
@@ -3658,7 +3743,7 @@ textarea.form-control-lg {
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 0.4; }
 
 .modal-header {
   display: flex;
@@ -3839,7 +3924,7 @@ textarea.form-control-lg {
     opacity: 0.75; }
   .btn-close:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    box-shadow: none;
     opacity: 1; }
   .btn-close:disabled, .btn-close.disabled {
     pointer-events: none;
@@ -4742,7 +4827,7 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem; }
 
-.py-2, .nav-otm .nav-item .dropdown-menu li a, .breadcrumb-otm {
+.py-2, .nav-otm .nav-item .dropdown-menu .dropdown-item, .breadcrumb-otm {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
@@ -7215,12 +7300,12 @@ textarea.form-control-lg {
   .nav-otm .nav-item .nav-link.active, .nav-otm .nav-item .nav-link:active {
     background-color: #dee2e6; }
 
-.nav-otm .nav-item .dropdown-menu li a {
+.nav-otm .nav-item .dropdown-menu .dropdown-item {
   font-weight: 500;
   color: #343a40; }
-  .nav-otm .nav-item .dropdown-menu li a:hover {
+  .nav-otm .nav-item .dropdown-menu .dropdown-item:hover {
     background-color: #e9ecef; }
-  .nav-otm .nav-item .dropdown-menu li a:active {
+  .nav-otm .nav-item .dropdown-menu .dropdown-item:active {
     background-color: #dee2e6; }
 
 .breadcrumb-otm {
@@ -7240,6 +7325,19 @@ a.dropdown-toggle.show {
 .page-subtitle {
   color: #343a40;
   font-size: 1.2rem; }
+
+.alert-toast-success {
+  background-color: #20c997;
+  color: #083226;
+  padding: 0.5rem 1rem; }
+  .alert-toast-success .btn-close {
+    padding: 0.825rem; }
+
+.alert-toast-danger {
+  background-color: #dc3545;
+  color: #fcebec; }
+  .alert-toast-danger .btn-close {
+    padding: 0.825rem; }
 
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
@@ -11825,8 +11923,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("fonts/fa-regular-400.eot");
-  src: url("fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("fonts/fa-regular-400.woff2") format("woff2"), url("fonts/fa-regular-400.woff") format("woff"), url("fonts/fa-regular-400.ttf") format("truetype"), url("fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -11841,8 +11939,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("fonts/fa-solid-900.eot");
-  src: url("fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fonts/fa-solid-900.woff2") format("woff2"), url("fonts/fa-solid-900.woff") format("woff"), url("fonts/fa-solid-900.ttf") format("truetype"), url("fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fa-solid-900.eot");
+  src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -11858,8 +11956,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("fonts/fa-brands-400.eot");
-  src: url("fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("fonts/fa-brands-400.woff2") format("woff2"), url("fonts/fa-brands-400.woff") format("woff"), url("fonts/fa-brands-400.ttf") format("truetype"), url("fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fa-brands-400.eot");
+  src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.woff") format("woff"), url("../fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
