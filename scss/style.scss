@@ -6,7 +6,7 @@ $enable-reduced-motion: true;
 $green: #128664;
 
 $container-max-widths: (
-        xxl: 1600px
+        xxl: 1420px
 );
 
 @import "node_modules/bootstrap/scss/functions";
@@ -184,6 +184,11 @@ a.dropdown-toggle.show {
 .alert-toast-danger{
   background-color: $danger;
   color: tint-color($danger, 90%);
+}
+
+//utilities
+.dn{
+  display: none;
 }
 
 //Font Awesome

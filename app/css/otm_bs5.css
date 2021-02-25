@@ -479,7 +479,7 @@ progress {
 
 @media (min-width: 1400px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1600px; } }
+    max-width: 1420px; } }
 
 .row {
   --bs-gutter-x: 1.5rem;
@@ -7442,6 +7442,9 @@ a.dropdown-toggle.show {
 .alert-toast-danger {
   background-color: #dc3545;
   color: #fcebec; }
+
+.dn {
+  display: none; }
 
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com

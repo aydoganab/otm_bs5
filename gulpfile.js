@@ -15,6 +15,7 @@ gulp.task('sass', function () {
         //.pipe(csso({comments:false}))
         .pipe(rename("otm_bs5.css"))
         .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("../otmnew/o/css"))
         .pipe(browserSync.reload({
             stream: true
         }))
