@@ -5,9 +5,9 @@ $enable-reduced-motion: true;
 
 $green: #128664;
 
-$container-max-widths: (
-        xxl: 1420px
-);
+/*$container-max-widths: (
+        xxl: 1320px
+);*/
 
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
@@ -36,8 +36,8 @@ $dropdown-padding-y: 0;
 $dropdown-link-hover-bg: $gray-200;
 
 //FOCUS
-$otm-focus-width: .12rem;
-$btn-focus-width: $otm-focus-width*1.1;
+$otm-focus-width: 0.1rem;
+$btn-focus-width: $otm-focus-width;
 $btn-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $form-select-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
@@ -192,6 +192,15 @@ a.dropdown-toggle.show {
   display: none;
 }
 
+//btn-light
+.btn-light {
+  @extend .btn-light;
+  &:hover, &:focus, &:active, .active{
+    background-color: shade-color($light, 10%);
+    border-color: shade-color($light, 11%);
+  }
+}
+
 //reduced buttons
 @each $color, $value in $theme-colors{
   .btn-reduced-#{$color}{
@@ -206,7 +215,7 @@ a.dropdown-toggle.show {
     }
     &:focus{
       background-color: tint-color($value, 80%);
-      box-shadow: 0 0 0 0.12rem rgba($value, 0.25);
+      box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
     }
   }
 }
@@ -225,7 +234,7 @@ a.dropdown-toggle.show {
       border-color: rgba($value, 0);
     }
     &:focus{
-      box-shadow: 0 0 0 0.1rem rgba($value, 0.25);
+      box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
     }
   }
 }
@@ -282,7 +291,7 @@ a.dropdown-toggle.show {
 
     &:focus, &.focus {
       background-color: tint-color($value, 80%);
-      box-shadow: 0 0 0 0.1rem tint-color($value, 75%);
+      box-shadow: 0 0 0 $otm-focus-width tint-color($value, 75%);
     }
   }
 }
@@ -291,7 +300,7 @@ a.dropdown-toggle.show {
 @each $color, $value in $theme-colors{
   .border-hover-#{$color}{
     &:hover{
-      border-color: $value;
+      border-color: $value !important;
     }
   }
 }
@@ -303,10 +312,27 @@ a.dropdown-toggle.show {
   }
 }
 
-//font size medium
+.shadow-sm-hover{
+  &:hover{
+    @extend .shadow-sm;
+  }
+}
+
+//font size medium and small
 .fs-medium{
   font-size: 0.875rem;
 }
+
+small, .small{
+  font-size: 0.75rem;
+}
+
+//cursors
+.cursor-pointer{
+  cursor: pointer;
+}
+
+
 
 
 //Font Awesome
