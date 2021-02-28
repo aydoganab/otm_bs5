@@ -27,6 +27,7 @@ gulp.task('js', function () {
         //.pipe(uglify())
         .pipe(concat('otm_bs5.js'))
         .pipe(gulp.dest("app/js"))
+        .pipe(gulp.dest("../otmnew/o/js"))
         .pipe(browserSync.reload({
             stream: true
         }))

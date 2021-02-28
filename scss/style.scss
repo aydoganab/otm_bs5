@@ -276,6 +276,11 @@ a.dropdown-toggle.show {
     outline: 0;
   }
 }
+.btn-icon-sm {
+  @extend .btn-icon;
+  width: $font-size-root*2 !important;
+  height: $font-size-root*2 !important;
+}
 @each $color, $value in $theme-colors{
   .btn-icon-#{$color}{
     color: tint-color($value, 10%);
@@ -320,18 +325,26 @@ a.dropdown-toggle.show {
 
 //font size medium and small
 .fs-medium{
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
 }
 
 small, .small{
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
 }
 
 //cursors
 .cursor-pointer{
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
+//blockquote
+.blockquote{
+  @extend .blockquote;
+  border-left: 3px solid $gray-500;
+  padding-left: 4px;
+  font-style: italic;
+  @extend .fs-medium;
+}
 
 
 
