@@ -247,8 +247,8 @@ a.dropdown-toggle.show {
   justify-content: center;
   border-radius: 50%;
   padding: 0 !important;
-  width: $font-size-root * 2.5;
-  height: $font-size-root * 2.5;
+  width: 2.375rem;
+  height: 2.375rem;
   position: relative;
   z-index: 0;
   &::before{
@@ -278,8 +278,8 @@ a.dropdown-toggle.show {
 }
 .btn-icon-sm {
   @extend .btn-icon;
-  width: $font-size-root*2 !important;
-  height: $font-size-root*2 !important;
+  width: 1.925rem !important;
+  height: 1.925rem !important;
 }
 @each $color, $value in $theme-colors{
   .btn-icon-#{$color}{
