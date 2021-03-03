@@ -3241,7 +3241,7 @@ textarea.form-control-lg {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   clear: both;
   font-weight: 400;
   color: #212529;
@@ -3280,7 +3280,7 @@ textarea.form-control-lg {
 
 .dropdown-item-text {
   display: block;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   color: #212529; }
 
 .dropdown-menu-dark {
@@ -7877,6 +7877,9 @@ small, .small, .small {
   border-left: 3px solid #adb5bd;
   padding-left: 4px;
   font-style: italic; }
+
+.table-td-middle td {
+  vertical-align: middle; }
 
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
