@@ -3786,11 +3786,11 @@ textarea.form-control-lg {
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
-    opacity: 0.9; }
+    opacity: 0.75; }
   .tooltip .tooltip-arrow {
     position: absolute;
     display: block;
-    width: 0.8rem;
+    width: 0;
     height: 0.4rem; }
     .tooltip .tooltip-arrow::before {
       position: absolute;
@@ -3804,19 +3804,19 @@ textarea.form-control-lg {
     bottom: 0; }
     .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
       top: -1px;
-      border-width: 0.4rem 0.4rem 0;
-      border-top-color: #000; }
+      border-width: 0.4rem 0 0;
+      border-top-color: #fff; }
 
 .bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^="right"] {
   padding: 0 0.4rem; }
   .bs-tooltip-end .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow {
     left: 0;
     width: 0.4rem;
-    height: 0.8rem; }
+    height: 0; }
     .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
       right: -1px;
-      border-width: 0.4rem 0.4rem 0.4rem 0;
-      border-right-color: #000; }
+      border-width: 0 0.4rem 0 0;
+      border-right-color: #fff; }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[data-popper-placement^="bottom"] {
   padding: 0.4rem 0; }
@@ -3824,19 +3824,19 @@ textarea.form-control-lg {
     top: 0; }
     .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
       bottom: -1px;
-      border-width: 0 0.4rem 0.4rem;
-      border-bottom-color: #000; }
+      border-width: 0 0 0.4rem;
+      border-bottom-color: #fff; }
 
 .bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^="left"] {
   padding: 0 0.4rem; }
   .bs-tooltip-start .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow {
     right: 0;
     width: 0.4rem;
-    height: 0.8rem; }
+    height: 0; }
     .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
       left: -1px;
-      border-width: 0.4rem 0 0.4rem 0.4rem;
-      border-left-color: #000; }
+      border-width: 0 0 0 0.4rem;
+      border-left-color: #fff; }
 
 .tooltip-inner {
   max-width: 200px;

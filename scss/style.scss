@@ -58,6 +58,11 @@ $nav-link-padding-y: 0.75rem;
 $nav-tabs-link-active-bg: $gray-400;
 $nav-tabs-link-active-color: $gray-900;
 
+$tooltip-arrow-color: $white;
+$tooltip-arrow-width: 0;
+$tooltip-arrow-height: 0.4rem;
+$tooltip-opacity: 0.75;
+
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";

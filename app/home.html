@@ -228,6 +228,9 @@
                 </div>
             </div>
 
+            <hr>
+
+            <button type="button" class="btn btn-secondary tooltip-elem" title="This is a tooltip">Tooltip</button>
 
         </div>
 
@@ -240,6 +243,11 @@
         $('.modal-content').html($('#logout-confirm').html());
         $('#otm-modal').modal('show');
     });
+
+    $(function () {
+        $('.tooltip-elem').tooltip();
+    });
+
 </script>
 
 </body>
