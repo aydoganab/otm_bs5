@@ -177,51 +177,56 @@ a.dropdown-toggle.show {
 }
 
 //tosts
-.alert-toast{
+.alert-toast {
   padding: 0.5rem 3rem 0.5rem 0.5rem !important;
-  .btn-close{
-  padding: 0.825rem;
-}
+
+  .btn-close {
+    padding: 0.825rem;
+  }
 }
 
-.alert-toast-success{
+.alert-toast-success {
 
   background-color: $teal;
   color: shade-color($teal, 70%);
 
 }
-.alert-toast-danger{
+
+.alert-toast-danger {
   background-color: $danger;
   color: tint-color($danger, 90%);
 }
 
 //utilities
-.dn{
+.dn {
   display: none;
 }
 
 //btn-light
 .btn-light {
   @extend .btn-light;
-  &:hover, &:focus, &:active, &.active{
+
+  &:hover, &:focus, &:active, &.active {
     background-color: shade-color($light, 10%) !important;
     border-color: shade-color($light, 11%) !important;
   }
 }
 
 //reduced buttons
-@each $color, $value in $theme-colors{
-  .btn-reduced-#{$color}{
+@each $color, $value in $theme-colors {
+  .btn-reduced-#{$color} {
     background-color: $white;
     border-color: tint-color($value, 30%);
     color: $value;
     font-weight: 500;
-    &:hover, &:active, &.active{
+
+    &:hover, &:active, &.active {
       background-color: tint-color($value, 85%);
       border-color: tint-color($value, 30%);
       color: shade-color($value, 10%);
     }
-    &:focus{
+
+    &:focus {
       background-color: tint-color($value, 80%);
       box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
     }
@@ -229,19 +234,22 @@ a.dropdown-toggle.show {
 }
 
 //flat buttons
-@each $color, $value in $theme-colors{
-  .btn-flat-#{$color}{
+@each $color, $value in $theme-colors {
+  .btn-flat-#{$color} {
     color: $value;
     font-weight: 500;
-    &:hover{
+
+    &:hover {
       color: shade-color($value, 5%);
       background-color: rgba($value, 0.07);
     }
-    &:focus, &:active, &.active{
+
+    &:focus, &:active, &.active {
       background-color: rgba($value, 0.2);
       border-color: rgba($value, 0);
     }
-    &:focus{
+
+    &:focus {
       box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
     }
   }
@@ -259,7 +267,8 @@ a.dropdown-toggle.show {
   height: 2.375rem;
   position: relative;
   z-index: 0;
-  &::before{
+
+  &::before {
     border-radius: 50%;
     content: '';
     opacity: 0;
@@ -274,23 +283,27 @@ a.dropdown-toggle.show {
     transform: scale(0);
     transition-property: transform, opacity;
   }
-  &:hover, &:active, &.active{
-    &::before{
+
+  &:hover, &:active, &.active {
+    &::before {
       opacity: 1;
       transform: scale(1);
     }
   }
+
   &:focus, &.focus {
     outline: 0;
   }
 }
+
 .btn-icon-sm {
   @extend .btn-icon;
   width: 1.925rem !important;
   height: 1.925rem !important;
 }
-@each $color, $value in $theme-colors{
-  .btn-icon-#{$color}{
+
+@each $color, $value in $theme-colors {
+  .btn-icon-#{$color} {
     color: tint-color($value, 10%);
 
     &::before {
@@ -298,7 +311,7 @@ a.dropdown-toggle.show {
       background-color: tint-color($value, 80%);
     }
 
-    &:hover, &:active, &.active{
+    &:hover, &:active, &.active {
       color: shade-color($value, 15%);
     }
 
@@ -310,43 +323,43 @@ a.dropdown-toggle.show {
 }
 
 //border hovers
-@each $color, $value in $theme-colors{
-  .border-hover-#{$color}{
-    &:hover{
+@each $color, $value in $theme-colors {
+  .border-hover-#{$color} {
+    &:hover {
       border-color: $value !important;
     }
   }
 }
 
 //shadow hover
-.shadow-hover{
+.shadow-hover {
   &:hover {
     @extend .shadow;
   }
 }
 
-.shadow-sm-hover{
-  &:hover{
+.shadow-sm-hover {
+  &:hover {
     @extend .shadow-sm;
   }
 }
 
 //font size medium and small
-.fs-medium{
+.fs-medium {
   font-size: 0.875rem !important;
 }
 
-small, .small{
+small, .small {
   font-size: 0.75rem !important;
 }
 
 //cursors
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer !important;
 }
 
 //blockquote
-.blockquote{
+.blockquote {
   @extend .blockquote;
   border-left: 3px solid $gray-500;
   padding-left: 4px;
@@ -355,12 +368,11 @@ small, .small{
 }
 
 //tables
-.table-td-middle{
-  td{
+.table-td-middle {
+  td {
     vertical-align: middle;
   }
 }
-
 
 
 //Font Awesome
@@ -369,5 +381,5 @@ $fa-font-size-base: 1rem;
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
+//@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
 
