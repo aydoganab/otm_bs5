@@ -3786,7 +3786,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
-    opacity: 0.75; }
+    opacity: 0.85; }
   .tooltip .tooltip-arrow {
     position: absolute;
     display: block;
@@ -3840,10 +3840,10 @@ textarea.form-control-lg {
 
 .tooltip-inner {
   max-width: 200px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.25rem;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #1a1a1a;
   border-radius: 0.25rem; }
 
 .modal-open {
@@ -7514,9 +7514,9 @@ a.dropdown-toggle.show {
 .dn {
   display: none; }
 
-.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light .active {
-  background-color: #dfe0e1;
-  border-color: #dddedf; }
+.btn-light:hover, .btn-light:focus, .btn-light:active, .active.btn-light {
+  background-color: #dfe0e1 !important;
+  border-color: #dddedf !important; }
 
 .btn-reduced-primary {
   background-color: #fff;

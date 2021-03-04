@@ -61,7 +61,9 @@ $nav-tabs-link-active-color: $gray-900;
 $tooltip-arrow-color: $white;
 $tooltip-arrow-width: 0;
 $tooltip-arrow-height: 0.4rem;
-$tooltip-opacity: 0.75;
+$tooltip-opacity: 0.85;
+$tooltip-bg: tint-color($black, 10%);
+$tooltip-padding-x: $spacer / 4;
 
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
@@ -201,9 +203,9 @@ a.dropdown-toggle.show {
 //btn-light
 .btn-light {
   @extend .btn-light;
-  &:hover, &:focus, &:active, .active{
-    background-color: shade-color($light, 10%);
-    border-color: shade-color($light, 11%);
+  &:hover, &:focus, &:active, &.active{
+    background-color: shade-color($light, 10%) !important;
+    border-color: shade-color($light, 11%) !important;
   }
 }
 
