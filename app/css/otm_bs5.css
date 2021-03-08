@@ -7524,10 +7524,11 @@ a.dropdown-toggle.show {
   color: #0d6efd;
   font-weight: 500; }
   .btn-reduced-primary:hover, .btn-reduced-primary:active, .btn-reduced-primary.active {
-    background-color: #dbe9ff;
+    background-color: #e7f1ff;
     border-color: #569afe;
-    color: #0c63e4; }
+    color: #0d6efd; }
   .btn-reduced-primary:focus {
+    color: #0c63e4;
     background-color: #cfe2ff;
     box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.25); }
 
@@ -7537,10 +7538,11 @@ a.dropdown-toggle.show {
   color: #6c757d;
   font-weight: 500; }
   .btn-reduced-secondary:hover, .btn-reduced-secondary:active, .btn-reduced-secondary.active {
-    background-color: #e9eaec;
+    background-color: #f0f1f2;
     border-color: #989ea4;
-    color: #616971; }
+    color: #6c757d; }
   .btn-reduced-secondary:focus {
+    color: #616971;
     background-color: #e2e3e5;
     box-shadow: 0 0 0 0.1rem rgba(108, 117, 125, 0.25); }
 
@@ -7550,10 +7552,11 @@ a.dropdown-toggle.show {
   color: #128664;
   font-weight: 500; }
   .btn-reduced-success:hover, .btn-reduced-success:active, .btn-reduced-success.active {
-    background-color: #dbede8;
+    background-color: #e7f3f0;
     border-color: #59aa93;
-    color: #10795a; }
+    color: #128664; }
   .btn-reduced-success:focus {
+    color: #10795a;
     background-color: #d0e7e0;
     box-shadow: 0 0 0 0.1rem rgba(18, 134, 100, 0.25); }
 
@@ -7563,10 +7566,11 @@ a.dropdown-toggle.show {
   color: #0dcaf0;
   font-weight: 500; }
   .btn-reduced-info:hover, .btn-reduced-info:active, .btn-reduced-info.active {
-    background-color: #dbf7fd;
+    background-color: #e7fafe;
     border-color: #56daf5;
-    color: #0cb6d8; }
+    color: #0dcaf0; }
   .btn-reduced-info:focus {
+    color: #0cb6d8;
     background-color: #cff4fc;
     box-shadow: 0 0 0 0.1rem rgba(13, 202, 240, 0.25); }
 
@@ -7576,10 +7580,11 @@ a.dropdown-toggle.show {
   color: #ffc107;
   font-weight: 500; }
   .btn-reduced-warning:hover, .btn-reduced-warning:active, .btn-reduced-warning.active {
-    background-color: #fff6da;
+    background-color: #fff9e6;
     border-color: #ffd451;
-    color: #e6ae06; }
+    color: #ffc107; }
   .btn-reduced-warning:focus {
+    color: #e6ae06;
     background-color: #fff3cd;
     box-shadow: 0 0 0 0.1rem rgba(255, 193, 7, 0.25); }
 
@@ -7589,10 +7594,11 @@ a.dropdown-toggle.show {
   color: #dc3545;
   font-weight: 500; }
   .btn-reduced-danger:hover, .btn-reduced-danger:active, .btn-reduced-danger.active {
-    background-color: #fae1e3;
+    background-color: #fcebec;
     border-color: #e7727d;
-    color: #c6303e; }
+    color: #dc3545; }
   .btn-reduced-danger:focus {
+    color: #c6303e;
     background-color: #f8d7da;
     box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.25); }
 
@@ -7602,10 +7608,11 @@ a.dropdown-toggle.show {
   color: #f8f9fa;
   font-weight: 500; }
   .btn-reduced-light:hover, .btn-reduced-light:active, .btn-reduced-light.active {
-    background-color: #fefefe;
+    background-color: #fefeff;
     border-color: #fafbfc;
-    color: #dfe0e1; }
+    color: #f8f9fa; }
   .btn-reduced-light:focus {
+    color: #dfe0e1;
     background-color: #fefefe;
     box-shadow: 0 0 0 0.1rem rgba(248, 249, 250, 0.25); }
 
@@ -7615,10 +7622,11 @@ a.dropdown-toggle.show {
   color: #212529;
   font-weight: 500; }
   .btn-reduced-dark:hover, .btn-reduced-dark:active, .btn-reduced-dark.active {
-    background-color: #dededf;
+    background-color: #e9e9ea;
     border-color: #646669;
-    color: #1e2125; }
+    color: #212529; }
   .btn-reduced-dark:focus {
+    color: #1e2125;
     background-color: #d3d3d4;
     box-shadow: 0 0 0 0.1rem rgba(33, 37, 41, 0.25); }
 
@@ -7880,6 +7888,22 @@ small, .small, .small {
 
 .table-td-middle td {
   vertical-align: middle; }
+
+.overflow-auto::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; }
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #c0c0c1;
+  border-radius: 10px; }
+
+.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: #999999; }
+
+.overflow-auto::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: inset 7px 10px 12px #f0f0f0; }
 
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com

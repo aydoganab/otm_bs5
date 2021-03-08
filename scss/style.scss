@@ -222,12 +222,13 @@ a.dropdown-toggle.show {
     font-weight: 500;
 
     &:hover, &:active, &.active {
-      background-color: tint-color($value, 85%);
+      background-color: tint-color($value, 90%);
       border-color: tint-color($value, 30%);
-      color: shade-color($value, 10%);
+      color: $value;
     }
 
     &:focus {
+      color: shade-color($value, 10%);
       background-color: tint-color($value, 80%);
       box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
     }
@@ -372,6 +373,27 @@ small, .small {
 .table-td-middle {
   td {
     vertical-align: middle;
+  }
+}
+
+//scroll
+.overflow-auto{
+  @extend .overflow-auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c1;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background: #999999;
+  }
+  &::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
   }
 }
 
