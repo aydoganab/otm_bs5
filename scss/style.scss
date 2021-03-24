@@ -59,12 +59,13 @@ $nav-link-padding-y: 0.75rem;
 $nav-tabs-link-active-bg: $gray-400;
 $nav-tabs-link-active-color: $gray-900;
 
-$tooltip-arrow-color: $white;
-$tooltip-arrow-width: 0;
-$tooltip-arrow-height: 0.4rem;
-$tooltip-opacity: 0.85;
+//$tooltip-arrow-width: 0;
+$tooltip-arrow-height: 0.2rem;
+$tooltip-opacity: 0.8;
 $tooltip-bg: tint-color($black, 10%);
-$tooltip-padding-x: $spacer / 4;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-padding-x: $spacer / 3;
+//$tooltip-margin: -2px;
 
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
@@ -87,6 +88,7 @@ $tooltip-padding-x: $spacer / 4;
 @import "node_modules/bootstrap/scss/alert";
 @import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/offcanvas";
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/helpers";
 @import "node_modules/bootstrap/scss/utilities/api";
