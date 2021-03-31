@@ -3940,7 +3940,7 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 0.625rem 1rem;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px); }
@@ -7981,6 +7981,10 @@ small, .small, .small {
   border-radius: 10px;
   box-shadow: inset 7px 10px 12px #f0f0f0; }
 
+/*.modal-header {
+  @extend .modal-header;
+  background-color: $gray-100;
+}*/
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

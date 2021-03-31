@@ -52,7 +52,9 @@ $form-label-font-size: $small-font-size;
 
 $btn-close-focus-shadow: none;
 
+//modal
 $modal-backdrop-opacity: 0.4;
+$modal-header-padding: 0.625rem 1rem;
 
 //nav tbas
 $nav-link-padding-y: 0.75rem;
@@ -398,6 +400,12 @@ small, .small {
     box-shadow: inset 7px 10px 12px #f0f0f0;
   }
 }
+
+//modal
+/*.modal-header {
+  @extend .modal-header;
+  background-color: $gray-100;
+}*/
 
 
 //Font Awesome
