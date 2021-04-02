@@ -4,19 +4,26 @@ $enable-transitions: true;
 $enable-reduced-motion: true;
 $enable-gradients: false;
 
-$green: #128664;
+
+
 
 /*$container-max-widths: (
         xxl: 1320px
 );*/
 
 @import "node_modules/bootstrap/scss/functions";
+
+@import "colors";
+
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/utilities";
+
 
 $font-size-root: 16px;
-$body-bg: $gray-200;
+//$body-bg: $gray-200;
+$body-bg: $light;
+
+$border-color: shade-color($linkedin-bg, 8%);
 
 $display-font-sizes: (
         1: 4rem,
@@ -70,6 +77,11 @@ $tooltip-arrow-color: $tooltip-bg;
 $tooltip-padding-x: $spacer / 3;
 //$tooltip-margin: -2px;
 
+//cards
+$card-border-color: shade-color($linkedin-bg, 8%);
+$card-cap-bg: shade-color($linkedin-bg, 1%);
+
+
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
@@ -94,7 +106,9 @@ $tooltip-padding-x: $spacer / 3;
 @import "node_modules/bootstrap/scss/offcanvas";
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/helpers";
+@import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/utilities/api";
+
 
 //NAV otm
 $user-img-max-height: 2.5rem;
@@ -119,15 +133,15 @@ $nav-otm-color: $gray-900;
       }
 
       &:hover {
-        background-color: $gray-200;
+        background-color: $linkedin-bg;
       }
 
       &.show {
-        background-color: $gray-200;
+        background-color: $linkedin-bg;
       }
 
       &.active, &:active {
-        background-color: $gray-300;
+        background-color: shade-color($linkedin-bg, 5%);
       }
 
     }
@@ -143,11 +157,11 @@ $nav-otm-color: $gray-900;
         @extend .py-2;
 
         &:hover {
-          background-color: $gray-200;
+          background-color: $linkedin-bg;
         }
 
-        &:active {
-          background-color: $gray-300;
+        &:active, &.active {
+          background-color: shade-color($linkedin-bg, 5%);
         }
       }
     }
@@ -158,7 +172,7 @@ $nav-otm-color: $gray-900;
 .breadcrumb-otm {
   @extend .py-2;
   @extend .px-3;
-  background-color: $gray-300;
+  background-color: shade-color($linkedin-bg, 5%);
 }
 
 //dropdowns
@@ -182,7 +196,7 @@ a.dropdown-toggle.show {
   font-size: 1.2rem;
 }
 
-//tosts
+//toasts
 .alert-toast {
   padding: 0.5rem 3rem 0.5rem 0.5rem !important;
 
@@ -212,9 +226,10 @@ a.dropdown-toggle.show {
 .btn-light {
   @extend .btn-light;
 
+
   &:hover, &:focus, &:active, &.active {
-    background-color: shade-color($light, 10%) !important;
-    border-color: shade-color($light, 11%) !important;
+    background-color: shade-color($light, 5%) !important;
+    border-color: shade-color($light, 6%) !important;
   }
 }
 
@@ -311,7 +326,7 @@ a.dropdown-toggle.show {
 
 @each $color, $value in $theme-colors {
   .btn-icon-#{$color} {
-    color: tint-color($value, 10%);
+    color: tint-color($value, 1%);
 
     &::before {
       border: 1px solid tint-color($value, 80%);
@@ -319,7 +334,7 @@ a.dropdown-toggle.show {
     }
 
     &:hover, &:active, &.active {
-      color: shade-color($value, 15%);
+      color: shade-color($value, 25%);
     }
 
     &:focus, &.focus {
