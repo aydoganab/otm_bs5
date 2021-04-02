@@ -70,7 +70,7 @@ $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 //$light:         $gray-100;
-$light:         $linkedin-bg;
+$light:         tint-color($linkedin-bg,10%);
 $dark:          $gray-900;
 // scss-docs-end theme-color-variables
 

@@ -21,7 +21,7 @@ $enable-gradients: false;
 
 $font-size-root: 16px;
 //$body-bg: $gray-200;
-$body-bg: $light;
+$body-bg: $linkedin-bg;
 
 $border-color: shade-color($linkedin-bg, 8%);
 
@@ -66,7 +66,8 @@ $modal-fade-transform: scale(.6);
 
 //nav tbas
 $nav-link-padding-y: 0.75rem;
-$nav-tabs-link-active-bg: $gray-400;
+$nav-tabs-link-hover-border-color: shade-color($light, 10%);
+$nav-tabs-link-active-bg: shade-color($light, 10%);
 $nav-tabs-link-active-color: $gray-900;
 
 //$tooltip-arrow-width: 0;
@@ -78,8 +79,12 @@ $tooltip-padding-x: $spacer / 3;
 //$tooltip-margin: -2px;
 
 //cards
-$card-border-color: shade-color($linkedin-bg, 8%);
-$card-cap-bg: shade-color($linkedin-bg, 1%);
+$card-border-color: shade-color($light, 8%);
+$card-cap-bg: shade-color($light, 1%);
+
+//list group
+$list-group-hover-bg: tint-color($light, 50%);
+
 
 
 @import "node_modules/bootstrap/scss/root";
@@ -133,15 +138,15 @@ $nav-otm-color: $gray-900;
       }
 
       &:hover {
-        background-color: $linkedin-bg;
+        background-color: $light;
       }
 
       &.show {
-        background-color: $linkedin-bg;
+        background-color: $light;
       }
 
       &.active, &:active {
-        background-color: shade-color($linkedin-bg, 5%);
+        background-color: shade-color($light, 5%);
       }
 
     }
@@ -157,11 +162,11 @@ $nav-otm-color: $gray-900;
         @extend .py-2;
 
         &:hover {
-          background-color: $linkedin-bg;
+          background-color: $light;
         }
 
         &:active, &.active {
-          background-color: shade-color($linkedin-bg, 5%);
+          background-color: shade-color($light, 5%);
         }
       }
     }
@@ -172,7 +177,7 @@ $nav-otm-color: $gray-900;
 .breadcrumb-otm {
   @extend .py-2;
   @extend .px-3;
-  background-color: shade-color($linkedin-bg, 5%);
+  background-color: shade-color($light, 5%);
 }
 
 //dropdowns
@@ -225,7 +230,6 @@ a.dropdown-toggle.show {
 //btn-light
 .btn-light {
   @extend .btn-light;
-
 
   &:hover, &:focus, &:active, &.active {
     background-color: shade-color($light, 5%) !important;
