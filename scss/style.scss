@@ -21,9 +21,7 @@ $enable-gradients: false;
 
 $font-size-root: 16px;
 //$body-bg: $gray-200;
-$body-bg: $linkedin-bg;
-
-$border-color: shade-color($linkedin-bg, 8%);
+$body-bg: $gray-300;
 
 $display-font-sizes: (
         1: 4rem,
@@ -34,8 +32,8 @@ $display-font-sizes: (
         6: 1.5rem
 );
 
-$link-color: $blue-500;
-$link-hover-color: $blue-700;
+$link-color: $indigo-400;
+$link-hover-color: $indigo-700;
 $link-decoration: none;
 
 $caret-width: .25rem;
@@ -45,7 +43,7 @@ $dropdown-item-padding-y: 0.5rem;
 $dropdown-link-hover-bg: $gray-200;
 
 //FOCUS
-$otm-focus-width: 0.1rem;
+$otm-focus-width: 0.05rem;
 $btn-focus-width: $otm-focus-width;
 $btn-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
@@ -60,9 +58,9 @@ $form-label-font-size: $small-font-size;
 $btn-close-focus-shadow: none;
 
 //modal
-$modal-backdrop-opacity: 0.4;
+$modal-backdrop-opacity: 0.25;
 $modal-header-padding: 0.625rem 1rem;
-$modal-fade-transform: scale(.6);
+$modal-fade-transform: scale(.8);
 
 //nav tbas
 $nav-link-padding-y: 0.75rem;
@@ -79,11 +77,11 @@ $tooltip-padding-x: $spacer / 3;
 //$tooltip-margin: -2px;
 
 //cards
-$card-border-color: shade-color($light, 8%);
-$card-cap-bg: shade-color($light, 1%);
+//$card-border-color: $gray-300;
+//$card-cap-bg: $gray-100;
 
 //list group
-$list-group-hover-bg: tint-color($light, 50%);
+//$list-group-hover-bg: tint-color($light, 50%);
 
 
 
@@ -118,6 +116,7 @@ $list-group-hover-bg: tint-color($light, 50%);
 //NAV otm
 $user-img-max-height: 2.5rem;
 $nav-otm-color: $gray-900;
+$nav-otm-bg: $gray-300;
 .nav-otm {
 
   @extend .align-items-center;
@@ -138,15 +137,15 @@ $nav-otm-color: $gray-900;
       }
 
       &:hover {
-        background-color: $light;
+        background-color: $nav-otm-bg;
       }
 
       &.show {
-        background-color: $light;
+        background-color: $nav-otm-bg;
       }
 
       &.active, &:active {
-        background-color: shade-color($light, 5%);
+        background-color: $nav-otm-bg;
       }
 
     }
@@ -162,11 +161,11 @@ $nav-otm-color: $gray-900;
         @extend .py-2;
 
         &:hover {
-          background-color: $light;
+          background-color: $nav-otm-bg;
         }
 
         &:active, &.active {
-          background-color: shade-color($light, 5%);
+          background-color: $nav-otm-bg;
         }
       }
     }
@@ -177,7 +176,7 @@ $nav-otm-color: $gray-900;
 .breadcrumb-otm {
   @extend .py-2;
   @extend .px-3;
-  background-color: shade-color($light, 5%);
+  background-color: $nav-otm-bg;
 }
 
 //dropdowns
@@ -211,9 +210,8 @@ a.dropdown-toggle.show {
 }
 
 .alert-toast-success {
-
   background-color: $teal;
-  color: shade-color($teal, 70%);
+  color: tint-color($teal, 95%);
 
 }
 
@@ -384,19 +382,12 @@ small, .small {
   cursor: pointer !important;
 }
 
-//blockquote
-.blockquote {
-  @extend .blockquote;
-  border-left: 3px solid $gray-500;
-  padding-left: 4px;
-  font-style: italic;
-  @extend .fs-medium;
-}
-
 //tables
 .table-td-middle {
-  td {
-    vertical-align: middle;
+  tbody{
+    th, td {
+      vertical-align: middle;
+    }
   }
 }
 

@@ -12,6 +12,18 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
+
+//$white:    #fff;
+//$gray-100: tint-color($linkedin-bg, 10%);
+//$gray-200: tint-color($linkedin-bg, 5%);
+//$gray-300: $linkedin-bg;
+//$gray-400: shade-color($linkedin-bg, 5%);
+//$gray-500: shade-color($linkedin-bg, 30%);
+//$gray-600: shade-color($linkedin-bg, 60%);
+//$gray-700: shade-color($linkedin-bg, 70%);
+//$gray-800: shade-color($linkedin-bg, 80%);
+//$gray-900: shade-color($linkedin-bg, 90%);
+$black:    #000;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -40,7 +52,8 @@ $orange:  #fd7e14;
 $yellow:  #ffc107;
 //$green:   #198754;
 $green: #128664;
-$teal:    #20c997;
+//$teal:    #20c997;
+$teal: #0b936a;
 $cyan:    #0dcaf0;
 // scss-docs-end color-variables
 
@@ -63,14 +76,16 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       $blue;
+//$primary:       $blue;
+$primary:       $indigo;
 $secondary:     $gray-600;
+$success:       $teal;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
+//$warning:       $orange;
 $danger:        $red;
-//$light:         $gray-100;
-$light:         tint-color($linkedin-bg,10%);
+$light:         $gray-100;
 $dark:          $gray-900;
 // scss-docs-end theme-color-variables
 
