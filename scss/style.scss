@@ -12,8 +12,15 @@ $enable-gradients: false;
 );*/
 
 @import "node_modules/bootstrap/scss/functions";
-
 @import "colors";
+
+$component-active-bg: $primary;
+$input-btn-focus-width:         .0625rem;
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-blur:          0;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+
 
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
@@ -43,12 +50,12 @@ $dropdown-item-padding-y: 0.5rem;
 $dropdown-link-hover-bg: $gray-200;
 
 //FOCUS
-$otm-focus-width: 0.05rem;
+/*$otm-focus-width: 0.05rem;
 $btn-focus-width: $otm-focus-width;
 $btn-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
 $form-select-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
-$form-check-input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;
+$form-check-input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-color;*/
 
 //FORMS
 $form-label-font-weight: 500;
@@ -83,6 +90,9 @@ $tooltip-padding-x: $spacer / 3;
 //list group
 //$list-group-hover-bg: tint-color($light, 50%);
 
+//floating form
+//$form-floating-height: add(3rem, $input-height-border);
+$form-floating-label-transform: scale(0.8) translateY(-.9rem) translateX(.15rem);
 
 
 @import "node_modules/bootstrap/scss/root";
@@ -252,7 +262,7 @@ a.dropdown-toggle.show {
     &:focus {
       color: shade-color($value, 10%);
       background-color: tint-color($value, 80%);
-      box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
+      box-shadow: 0 0 0 $input-btn-focus-width rgba($value, 0.25);
     }
   }
 }
@@ -274,7 +284,7 @@ a.dropdown-toggle.show {
     }
 
     &:focus {
-      box-shadow: 0 0 0 $otm-focus-width rgba($value, 0.25);
+      box-shadow: 0 0 0 $input-btn-focus-width rgba($value, 0.25);
     }
   }
 }
@@ -341,7 +351,7 @@ a.dropdown-toggle.show {
 
     &:focus, &.focus {
       background-color: tint-color($value, 80%);
-      box-shadow: 0 0 0 $otm-focus-width tint-color($value, 75%);
+      box-shadow: 0 0 0 $input-btn-focus-width tint-color($value, 75%);
     }
   }
 }
