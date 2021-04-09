@@ -82,7 +82,7 @@ $secondary:     $gray-600;
 $success:       $teal;
 $success:       $green;
 $info:          $cyan;
-$warning:       $yellow;
+$warning:       shade-color($yellow, 10%);
 //$warning:       $orange;
 $danger:        $red;
 $light:         $gray-100;

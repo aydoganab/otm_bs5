@@ -16,7 +16,7 @@ $enable-gradients: false;
 
 $component-active-bg: $primary;
 $input-btn-focus-width:         .0625rem;
-$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color-opacity: .35;
 $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
 $input-btn-focus-blur:          0;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
@@ -40,7 +40,9 @@ $display-font-sizes: (
 );
 
 $link-color: $indigo-400;
-$link-hover-color: $indigo-700;
+$link-color: $primary;
+$link-hover-color: shift-color($link-color, 40);
+//$link-hover-color: $indigo-700;
 $link-decoration: none;
 
 $caret-width: .25rem;
@@ -59,7 +61,7 @@ $form-check-input-focus-box-shadow: 0 0 0 $otm-focus-width $input-btn-focus-colo
 
 //FORMS
 $form-label-font-weight: 500;
-$form-label-margin-bottom: 0.125rem;
+$form-label-margin-bottom: 0.25rem;
 $form-label-font-size: $small-font-size;
 
 //close button
@@ -78,12 +80,13 @@ $nav-tabs-link-active-bg: shade-color($light, 10%);
 $nav-tabs-link-active-color: $gray-900;
 
 //nav pills
-$nav-pills-link-active-bg: $indigo-400;
+//$nav-pills-link-active-bg: $indigo-400;
 
 //$tooltip-arrow-width: 0;
 $tooltip-arrow-height: 0.2rem;
-$tooltip-opacity: 0.8;
-$tooltip-bg: tint-color($black, 10%);
+$tooltip-opacity: 0.85;
+//$tooltip-bg: tint-color($black, 10%);
+$tooltip-bg: shade-color($primary, 40%);
 $tooltip-arrow-color: $tooltip-bg;
 $tooltip-padding-x: $spacer / 3;
 //$tooltip-margin: -2px;
