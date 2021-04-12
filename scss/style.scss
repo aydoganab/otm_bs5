@@ -163,11 +163,12 @@ $nav-otm-bg: $gray-200;
       padding-bottom: 1rem;
 
       &.nav-link-user {
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
+        padding-top: 0.4833rem !important;
+        padding-bottom: 0.4833rem !important;
 
         img {
-          max-height: $user-img-max-height;
+          height: $user-img-max-height;
+          width: auto;
         }
       }
 
