@@ -35,7 +35,7 @@ $border-radius-pill:          50rem;
 @import "node_modules/bootstrap/scss/mixins";
 
 
-$font-family-base: 'Inter', sans-serif;
+$font-family-sans-serif: 'Inter', sans-serif;
 $font-size-root: 15px;
 $body-bg: #f7f7f8;
 
@@ -457,6 +457,17 @@ small, .small {
   background-color: $gray-100;
 }*/
 
+
+//print
+@media print {
+  body{
+    background-color: $white !important;
+  }
+
+  #otm-page-wrap{
+    box-shadow: none !important;
+  }
+}
 
 //Font Awesome
 $fa-font-path: "../fonts";
