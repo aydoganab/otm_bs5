@@ -36,7 +36,7 @@ $border-radius-pill:          50rem;
 
 
 $font-family-sans-serif: 'Inter', sans-serif;
-//$font-size-root: 15px;
+$font-size-root: 16px;
 $body-bg: #f7f7f8;
 
 
@@ -145,6 +145,18 @@ $tooltip-padding-x: $spacer / 2;
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/utilities/api";
 
+//html font size in small devices
+@include media-breakpoint-down(md){
+  html{
+    font-size: 15px !important;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  html{
+    font-size: 14px !important;
+  }
+}
 
 //NAV otm
 $user-img-max-height: 2.5rem;
