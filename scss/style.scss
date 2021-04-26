@@ -173,6 +173,9 @@ $nav-otm-bg: $gray-200;
       color: $nav-otm-color;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      @extend .px-2;
+      @extend .px-lg-3;
+      @extend .px-xl-4;
 
       &.nav-link-user {
         padding-top: 0.4833rem !important;
@@ -211,7 +214,7 @@ $nav-otm-bg: $gray-200;
 
 //breadcrumb
 .breadcrumb-otm {
-  @extend .py-2;
+  @extend .py-3;
   @extend .px-3;
   @extend .border-bottom;
   background-color: $nav-otm-bg;
