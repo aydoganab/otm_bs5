@@ -18,7 +18,8 @@
   "homepage": "https://github.com/aydoganab/otm_bs5#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^5.0.0-beta3",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "5.0.0-beta3",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

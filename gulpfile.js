@@ -23,7 +23,7 @@ gulp.task('sass', function () {
 
 //JS
 gulp.task('js', function () {
-    return gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
+    return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/@popperjs/core/dist/umd/popper.js', 'node_modules/bootstrap/dist/js/bootstrap.js'])
         .pipe(uglify())
         .pipe(concat('otm_bs5.js'))
         .pipe(gulp.dest("app/js"))
