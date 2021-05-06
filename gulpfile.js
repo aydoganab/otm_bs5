@@ -12,10 +12,10 @@ gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass())
         .pipe(autoprefixer({browserlist: [">= 1%", "last 1 major version", "not dead", "Chrome >= 60", "Firefox >= 60", "Edge >= 16", "iOS >= 10", "Safari >= 10", "Android >= 6", "not Explorer <= 11"]}))
-        .pipe(csso({comments:false}))
+        //.pipe(csso({comments:false}))
         .pipe(rename("otm_bs5.css"))
         .pipe(gulp.dest("app/css"))
-        .pipe(gulp.dest("../otmnew/o/css"))
+        //.pipe(gulp.dest("../otmnew/o/css"))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -24,10 +24,10 @@ gulp.task('sass', function () {
 //JS
 gulp.task('js', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/@popperjs/core/dist/umd/popper.js', 'node_modules/bootstrap/dist/js/bootstrap.js'])
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('otm_bs5.js'))
         .pipe(gulp.dest("app/js"))
-        .pipe(gulp.dest("../otmnew/o/js"))
+        //.pipe(gulp.dest("../otmnew/o/js"))
         .pipe(browserSync.reload({
             stream: true
         }))
