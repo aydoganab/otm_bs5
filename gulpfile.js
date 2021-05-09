@@ -37,6 +37,7 @@ gulp.task('js', function () {
 gulp.task('fa', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
         .pipe(gulp.dest("app/fonts"))
+        .pipe(gulp.dest("../otmnew/o/fonts"))
         .pipe(browserSync.reload({
             stream: true
         }))

@@ -169,7 +169,7 @@ $nav-otm-bg: $gray-200;
 
   .nav-item {
     .nav-link {
-      font-weight: 400;
+      font-weight: 500;
       color: $nav-otm-color;
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -198,6 +198,7 @@ $nav-otm-bg: $gray-200;
       @extend .shadow;
 
       .dropdown-item {
+        font-weight: 500;
         color: $nav-otm-color;
         @extend .py-2;
         border-radius: 6px;
