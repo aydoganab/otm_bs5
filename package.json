@@ -19,7 +19,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "5.0.1",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
