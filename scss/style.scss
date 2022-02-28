@@ -101,7 +101,7 @@ $tooltip-opacity: 1;
 //$tooltip-bg: tint-color($black, 10%);
 $tooltip-bg: shade-color($primary, 40%);
 $tooltip-arrow-color: $tooltip-bg;
-$tooltip-padding-x: $spacer / 2;
+$tooltip-padding-x: calc($spacer / 2);
 //$tooltip-margin: -2px;
 
 //cards
@@ -215,7 +215,7 @@ $nav-otm-bg: $gray-200;
 
 //breadcrumb
 .breadcrumb-otm {
-  @extend .py-3;
+  @extend .py-2;
   @extend .px-3;
   @extend .border-bottom;
   background-color: $nav-otm-bg;
@@ -489,6 +489,7 @@ small, .small {
 //Font Awesome
 $fa-font-path: "../fonts";
 $fa-font-size-base: 1rem;
+$fa-fw-width: calc(20em / 16);
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
